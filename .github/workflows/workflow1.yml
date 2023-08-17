@@ -1,0 +1,14 @@
+name: Workflow 1
+
+on:
+  push:
+    branches:
+      - main
+      - feature-branch
+
+jobs:
+  echo:
+    name: Echo!
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello world
