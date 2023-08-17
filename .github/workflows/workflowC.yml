@@ -1,0 +1,17 @@
+name: Workflow C
+
+on:
+  workflow_run:
+    workflows:
+      - "Workflow B"
+    types:
+      - completed
+    branches:
+      - main
+
+jobs:
+  echo:
+    name: Echo 3!
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo hello world 3
